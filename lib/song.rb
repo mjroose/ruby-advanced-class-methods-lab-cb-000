@@ -49,7 +49,10 @@ class Song
 
   def self.new_from_filename(filename)
     song_data = filename.slice(0, filename.length - 4).split(" - ")
-    puts song_data
+    artist = song_data[0]
+    name = song_data[1]
+    song = new_by_name(name)
+    song.artist_name = artist
   end
 
   def self.create_from_filename(filename)
