@@ -49,13 +49,11 @@ class Song
 
   def self.create_from_filename(filename)
     filename.slice!(".mp3")
-    puts filename
     song_data = filename.split(" - ")
     artist = song_data[0]
     name = song_data[1]
-    puts "#{artist} - #{name}"
-    # song = Song.find_or_create_by_name(name)
-    # song.artist = artist
-    # song
+    song = Song.find_or_create_by_name(name)
+    song.artist = artist
+    song
   end
 end
