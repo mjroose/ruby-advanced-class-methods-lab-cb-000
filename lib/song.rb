@@ -34,4 +34,5 @@ class Song
     Song.all.find do |song|
       song.name == name
     end
+  end
 end
