@@ -52,8 +52,9 @@ class Song
     song_data = filename.split(" - ")
     artist = song_data[0]
     name = song_data[1]
-    song = Song.find_or_create_by_name(name)
-    song.artist = artist
-    song
+    puts "#{artist} - #{name}"
+    # song = Song.find_or_create_by_name(name)
+    # song.artist = artist
+    # song
   end
 end
