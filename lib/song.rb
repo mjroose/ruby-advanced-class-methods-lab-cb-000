@@ -20,4 +20,5 @@ class Song
     song = Song.create
     song.name = name
     song
+  end
 end
