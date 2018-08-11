@@ -35,4 +35,8 @@ class Song
       song.name == name
     end
   end
+
+  def self.find_or_create_by_name(name)
+    song = Song.find_by_name(name)
+    song ? song : Song.create_by_name(name)
 end
